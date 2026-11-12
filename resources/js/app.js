@@ -1,8 +1,6 @@
 import { BrowserQRCodeReader } from '@zxing/browser';
 const csrf=document.querySelector('meta[name="csrf-token"]')?.content;
 document.querySelectorAll('[data-demo-email]').forEach(button=>button.addEventListener('click',()=>{document.getElementById('email').value=button.dataset.demoEmail;document.getElementById('password').value=button.dataset.demoPassword;document.querySelectorAll('.role-choice').forEach(x=>x.classList.toggle('selected',x===button));document.getElementById('email').focus();}));
-document.getElementById('menuToggle')?.addEventListener('click',()=>{const open=document.getElementById('sidebar').classList.toggle('open');document.getElementById('menuToggle').setAttribute('aria-expanded',String(open));});
-document.addEventListener('keydown',event=>{if(event.key==='Escape'){document.getElementById('sidebar')?.classList.remove('open');document.getElementById('menuToggle')?.setAttribute('aria-expanded','false');}});
 document.querySelectorAll('[data-confirm]').forEach(form=>form.addEventListener('submit',event=>{if(!window.confirm(form.dataset.confirm))event.preventDefault();}));
 const connection=()=>{const online=navigator.onLine;const label=document.getElementById('connectionLabel');if(label)label.textContent=online?'Conexión disponible':'Sin conexión de red';const banner=document.getElementById('offlineBanner');if(banner)banner.hidden=online;const dot=document.getElementById('connectionDot');if(dot)dot.style.background=online?'':'#e5b663';};
 window.addEventListener('online',connection);window.addEventListener('offline',connection);connection();
