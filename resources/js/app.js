@@ -1,5 +1,8 @@
 import { BrowserQRCodeReader } from '@zxing/browser';
 const csrf=document.querySelector('meta[name="csrf-token"]')?.content;
+const topNav=document.querySelector('.top-nav');
+const activeNav=topNav?.querySelector('[aria-current="page"]');
+if(topNav&&activeNav&&topNav.scrollWidth>topNav.clientWidth){topNav.scrollLeft=Math.max(0,activeNav.offsetLeft-topNav.offsetLeft-18);}
 document.querySelectorAll('[data-demo-email]').forEach(button=>button.addEventListener('click',()=>{document.getElementById('email').value=button.dataset.demoEmail;document.getElementById('password').value=button.dataset.demoPassword;document.querySelectorAll('.role-choice').forEach(x=>x.classList.toggle('selected',x===button));document.getElementById('email').focus();}));
 document.querySelectorAll('[data-confirm]').forEach(form=>form.addEventListener('submit',event=>{if(!window.confirm(form.dataset.confirm))event.preventDefault();}));
 const connection=()=>{const online=navigator.onLine;const label=document.getElementById('connectionLabel');if(label)label.textContent=online?'Conexión disponible':'Sin conexión de red';const banner=document.getElementById('offlineBanner');if(banner)banner.hidden=online;const dot=document.getElementById('connectionDot');if(dot)dot.style.background=online?'':'#e5b663';};

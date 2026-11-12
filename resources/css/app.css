@@ -16,6 +16,7 @@
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 
 /* NEXORA: university identity and horizontal workspace navigation. */
+body{overflow-x:clip}
 .app-header{background:var(--surface);border-bottom:1px solid var(--border)}
 .header-inner{max-width:1510px;margin:0 auto;min-height:104px;padding:12px 42px;display:flex;align-items:center;gap:32px}
 .brand{display:inline-flex;align-items:center;gap:22px;flex-shrink:0;color:var(--ink)}
