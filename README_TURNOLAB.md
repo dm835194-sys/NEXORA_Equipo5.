@@ -1,5 +1,7 @@
 # TurnoLab UPTEX
 
+[Abrir sistema publicado](https://turnolab-web-production.up.railway.app)
+
 MVP de préstamos de equipo y laboratorios para el Reto 4 del UPTEX CHALLENGE. Laravel 13, Blade, Tailwind CSS y JavaScript; PHP 8.4.1 o posterior. Base SQLite para desarrollo local y MySQL para Railway.
 
 ## Abrir el sistema
