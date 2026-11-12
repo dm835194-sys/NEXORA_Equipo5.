@@ -1,0 +1,1 @@
+@props(['title'=>'Aún no hay registros','text'=>'Los registros aparecerán aquí cuando se complete una operación.'])<div class="empty-state"><i class="ph ph-tray" aria-hidden="true"></i><h3>{{ $title }}</h3><p>{{ $text }}</p>{{ $slot }}</div>

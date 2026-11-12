@@ -1,0 +1,1 @@
+@props(['value'])<span {{ $attributes->class(['badge','badge-'.$value]) }}>{{ config('turnolab.states')[$value] ?? $value }}</span>
